@@ -6,6 +6,7 @@
 /data/train
 /data/test
 
-*png
-*jpg
+*.png
+*.jpg
 *.csv
+*.zip
