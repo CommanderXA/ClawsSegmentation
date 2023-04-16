@@ -9,8 +9,8 @@ mkdir -p inference/imgs
 mkdir -p inference/masks
 
 mkdir -p data
-unzip -q data/dataset.zip -d data/
+unzip -q gdsc-nu-ml-hackathon-bts-case-competition.zip -d data/
 mkdir -p data/test/masks
-rm data/sample_submission.csv data/transform_solution.ipynb
+rm gdsc-nu-ml-hackathon-bts-case-competition.zip data/sample_submission.csv data/transform_solution.ipynb
 
 python3 prepare.py
