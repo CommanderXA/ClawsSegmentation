@@ -1,0 +1,10 @@
+ipython==8.6.0
+numpy==1.23.3
+opencv-python==4.7.0.72
+pandas==1.5.1
+Pillow==9.0.1
+polars==0.16.16
+torch==2.0.0
+torchmetrics==0.11.4
+torchvision==0.15.1
+tqdm==4.64.1

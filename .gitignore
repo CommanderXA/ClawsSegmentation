@@ -1,0 +1,11 @@
+/__pycache__
+/models
+/images
+/.venv
+
+/data/train
+/data/test
+
+*png
+*jpg
+*.csv
