@@ -6,7 +6,7 @@ by `stable-confusion` team
 
 ## Data
 
-**[Kaggle Competition]**(https://www.kaggle.com/competitions/gdsc-nu-ml-hackathon-bts-case-competition/overview)
+**[Kaggle Competition](https://www.kaggle.com/competitions/gdsc-nu-ml-hackathon-bts-case-competition/overview)**
 
 Kaggle Competition from NU GDSC and BTS Kazakhstan.
 
