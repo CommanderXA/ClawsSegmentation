@@ -30,8 +30,9 @@ Kaggle Competition from NU GDSC and BTS Kazakhstan.
 
 Run the following commands in project root directory.
 
+- `python3 -m venv .venv`
 - `source .venv/bin/activate`
-- `./setup.sh`
+- `sh ./setup.sh`
 
 ## Use
 
