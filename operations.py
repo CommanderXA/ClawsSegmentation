@@ -16,7 +16,7 @@ losses = []
 metrics = []
 
 
-def train(model: UNet, loader, criterion, scaler, optim, dice, model_file, epochs: int, device, grad_scaler):
+def train(model: UNet, loader, criterion, scaler, optim, dice, model_file, epochs: int, device, grad_scaler, log):
     model.train()
 
     for epoch in range(1, epochs+1):
@@ -49,7 +49,7 @@ def train(model: UNet, loader, criterion, scaler, optim, dice, model_file, epoch
             # Write checkpoint as desired, e.g.,
             torch.save(checkpoint, model_file)
 
-            print(f"Loss: {np.mean(losses)}, Accuracy: {np.mean(metrics)}")
+            log.info(f"Loss: {np.mean(losses)}, Accuracy: {np.mean(metrics)}")
             losses.clear()
             metrics.clear()
 
@@ -99,7 +99,7 @@ def validation(model: UNet, loader, device):
             responses.append([i] + [" ".join(short_coords)])
 
         sample = pd.DataFrame(responses, columns=["ImageID", "Expected"])
-        sample.to_csv("sample16_new2.csv", index=None)
+        sample.to_csv("sample.csv", index=None)
 
 
 def inference(model, loader, device):

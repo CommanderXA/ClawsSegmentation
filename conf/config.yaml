@@ -1,0 +1,36 @@
+defaults:  
+  - _self_  
+  - override hydra/job_logging: disabled
+  - override hydra/hydra_logging: disabled
+
+# unet config
+config:
+  epochs: 10
+  batch_size: 4
+  lr: 0.0001
+  weight_decay: 1e-5
+  model_file: "models/unet.pth"
+  device: "cuda"
+  pretrained: False
+  grad_scaler: True
+
+# hydra customizations
+hydra:  
+  output_subdir: null  
+  run:  
+    dir: .
+  job_logging:
+    disable_existing_loggers: true
+    version: 1
+    formatters:
+      colorlog:
+        '()': 'colorlog.ColoredFormatter'
+        format: "[%(cyan)s%(asctime)s%(reset)s][%(green)s%(levelname)s%(reset)s] %(message)s"
+    handlers:
+      console:
+        class: logging.StreamHandler
+        formatter: colorlog
+        stream: ext://sys.stdout
+    root:
+      level: INFO
+      handlers: [console]

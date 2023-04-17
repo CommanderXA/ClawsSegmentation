@@ -5,7 +5,8 @@ from collections import OrderedDict
 
 
 class UNet(nn.Module):
-
+    '''Unet model'''
+    
     def __init__(self, in_channels=3, out_channels=1, init_features=32):
         super(UNet, self).__init__()
 
@@ -70,6 +71,7 @@ class UNet(nn.Module):
 
     @staticmethod
     def _block(in_channels, features, name):
+        '''Block representing encoder and decoder'''
         return nn.Sequential(
             OrderedDict(
                 [
@@ -102,3 +104,7 @@ class UNet(nn.Module):
                 ]
             )
         )
+    
+    def get_parameters_amount(self) -> int:
+        '''Return the number of parameters of the model'''
+        return sum(p.numel() for p in self.parameters())

@@ -16,9 +16,11 @@ Kaggle Competition from NU GDSC and BTS Kazakhstan.
 
 ## Libraries & Frameworks
 
-- PyTorch
-- polars
-- tqdm
+- **PyTorch** *(Deep Learning)*
+- **polars** *(work with csv)*
+- **hydra** *(logging and configuration)*
+- **tqdm** *(loading bar)*
+- **PIL** *(work with images)*
 
 ## Techniques
 
@@ -35,6 +37,8 @@ Run the following commands in project root directory.
 - `sh ./setup.sh`
 
 ## Use
+
+All the configuration is located inside `cfg/config.yaml`. This enables you to easily change the configuration of the UNet.
 
 To use the project either:
 

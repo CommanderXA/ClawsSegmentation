@@ -1,10 +1,10 @@
 /__pycache__
-/models
-/images
 /.venv
 
-/data/train
-/data/test
+/models
+/images
+/inference
+/data
 
 *.png
 *.jpg
