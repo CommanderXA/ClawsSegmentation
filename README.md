@@ -45,6 +45,6 @@ To use the project either:
 - download the `unet.pth`
 - place it inside the `models` directory
 
-or train the model by yourself using `train.py`. Before training the model you need to download the dataset into the project root directory (leave the file name unchenged), then run `sh setup.sh`.
+or train the model by yourself using `train.py`. Before training the model you need to download the dataset into the project root directory (leave the file name unchanged), then run `sh setup.sh`.
 
-To get predicitons run `python main.py`, but note, you have to add at least one image into the `inference/imgs` directory
+To get predicitons run `python main.py`, but note, you have to add at least one image into the `inference/imgs` directory.
